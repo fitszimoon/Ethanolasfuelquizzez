@@ -18,6 +18,7 @@ let questions = [
 
 let currentQuestionIndex = 0;
 let score = 0;
+let answeredQuestions = [];  // Store indices of answered questions
 
 // Fisher-Yates shuffle for randomizing the array
 function shuffle(array) {
@@ -32,6 +33,11 @@ shuffle(questions);
 
 // Load the question and shuffle the options
 function loadQuestion() {
+    // Skip already answered questions when going back
+    while (answeredQuestions.includes(currentQuestionIndex) && currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+    }
+
     let currentQuestion = questions[currentQuestionIndex];
     let options = currentQuestion.options.slice(); // Create a copy of options array
     
@@ -72,6 +78,9 @@ function checkAnswer(selectedOption, correctAnswerIndex) {
         alert("Wrong answer! Moving to next question.");
     }
     
+    // Add current question to the list of answered questions
+    answeredQuestions.push(currentQuestionIndex);
+    
     // Move to the next question after checking the answer (whether correct or wrong)
     nextQuestion();
 }
@@ -93,10 +102,16 @@ function nextQuestion() {
     }
 }
 
-// Go back to the previous question
+// Go back to the previous unanswered question
 function goBack() {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
+        
+        // Skip already answered questions
+        while (answeredQuestions.includes(currentQuestionIndex) && currentQuestionIndex > 0) {
+            currentQuestionIndex--;
+        }
+        
         loadQuestion();
     }
 }
