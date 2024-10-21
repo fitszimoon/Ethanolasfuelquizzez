@@ -166,7 +166,15 @@ function canGoBack() {
 
 // Update the progress bar
 function updateProgressBar() {
-    let progress = ((answeredQuestions.length) / questions.length) * 100;
+    let progress;
+
+    // If all questions are answered, set the progress to 100%
+    if (answeredQuestions.length === questions.length) {
+        progress = 100;
+    } else {
+        progress = (answeredQuestions.length / questions.length) * 100;
+    }
+
     document.getElementById("progress-bar").style.width = progress + "%";
 }
 
