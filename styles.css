@@ -13,7 +13,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    width: 500px;
     text-align: center;
 }
 
@@ -23,7 +23,7 @@ body {
 }
 
 #question {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 20px;
 }
 
@@ -40,11 +40,14 @@ body {
     margin: 5px 0;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.5rem;
 }
 
 .option:hover {
     background-color: #2980b9;
+    transform: scale(1.1) rotate(-3deg);
 }
+
 
 #submit {
     background-color: #2ecc71;
@@ -58,3 +61,48 @@ body {
     margin-top: 20px;
     font-size: 16px;
 }
+
+/* Styles for the progress bar */
+.progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 25px;
+}
+/* Style for the navigation buttons (Back and Next) */
+.nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50; /* Same green background for both */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer on hover */
+    margin: 10px;
+}
+
+.nav-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Align Back button to the left and Next button to the right */
+button {
+    flex: 1; /* Allow buttons to grow equally */
+}
+
+div {
+    display: block;
+    justify-content: space-between; /* Place buttons at opposite ends */
+    margin: 20px 0; /* Spacing around the buttons */
+}
+
+
+
