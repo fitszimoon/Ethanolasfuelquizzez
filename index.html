@@ -26,8 +26,8 @@
         /* Styles for the options */
         .options {
             display: flex; /* Use flexbox for alignment */
-            justify-content: center; /* Center the buttons horizontally */
-            flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+            flex-direction: column; /* Change to column layout */
+            align-items: center; /* Center the buttons horizontally */
             margin: 20px 0; /* Spacing around the options */
         }
 
@@ -39,8 +39,8 @@
             background-color: #007bff; /* Blue background color */
             color: white; /* White text color */
             cursor: pointer; /* Pointer on hover */
-            margin: 10px; /* Space between buttons */
-            flex: 0 1 150px; /* Grow and shrink as needed, with a base width of 150px */
+            margin: 10px 0; /* Space between buttons */
+            width: 200px; /* Set a consistent width */
             transition: background-color 0.3s; /* Smooth background color change on hover */
         }
 
@@ -111,7 +111,7 @@
         </div>
         
         <div id="question">Question text here</div>
-        
+            
         <!-- Options Buttons -->
         <div class="options">
             <button class="option" onclick="checkAnswer(0)">Option 1</button>
