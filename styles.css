@@ -12,8 +12,8 @@ body {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 5px;
-    width: 50px;
+    padding: 20px;
+    width: 400px; /* Adjusted width */
     text-align: center;
 }
 
@@ -41,13 +41,13 @@ body {
     cursor: pointer;
     border-radius: 5px;
     font-size: 1.5rem;
+    transition: background-color 0.3s, transform 0.3s; /* Added transition for smooth effect */
 }
 
 .option:hover {
     background-color: #2980b9;
     transform: scale(1.1) rotate(-3deg);
 }
-
 
 #submit {
     background-color: #2ecc71;
@@ -77,7 +77,14 @@ body {
     background-color: #4caf50;
     border-radius: 25px;
 }
-/* Style for the navigation buttons (Back and Next) */
+
+/* Styles for the navigation buttons (Back and Next) */
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Place buttons at opposite ends */
+    margin: 20px 0; /* Spacing around the buttons */
+}
+
 .nav-button {
     padding: 10px 20px;
     font-size: 16px;
@@ -86,23 +93,10 @@ body {
     background-color: #4caf50; /* Same green background for both */
     color: white; /* Text color */
     cursor: pointer; /* Pointer on hover */
-    margin: 10px;
+    flex: 1; /* Allow buttons to grow equally */
+    margin: 0 5px; /* Space between buttons */
 }
 
 .nav-button:hover {
     background-color: #45a049; /* Darker green on hover */
 }
-
-/* Align Back button to the left and Next button to the right */
-button {
-    flex: 1; /* Allow buttons to grow equally */
-}
-
-div {
-    display: block;
-    justify-content: space-between; /* Place buttons at opposite ends */
-    margin: 20px 0; /* Spacing around the buttons */
-}
-
-
-
