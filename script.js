@@ -5,12 +5,27 @@ let questions = [
         correctAnswer: 0
     },
     {
-        question: "What is the process to make ethanol?",
+        question: "What is the proto make ethanol?",
         options: ["Distillation of starch", "Fermentation of sugar", "Hydrolysis of cellulose", "Synthesis of glucose"],
         correctAnswer: 1
     },
     {
-        question: "The engine works in 4 stages; what are these?",
+        question: "The engine works in 4 stages; whate these?",
+        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
+        correctAnswer: 1
+    },
+    {
+        question: "The engine works in 4 stageat are these?",
+        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
+        correctAnswer: 1
+    },
+    {
+        question: "The engine work 4 stages; what are these?",
+        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
+        correctAnswer: 1
+    },
+    {
+        question: "The engine works in tages; what are these?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
     },
@@ -20,32 +35,17 @@ let questions = [
         correctAnswer: 1
     },
     {
-        question: "The engine works in 4 stages; what are these?",
+        question: "The ene works in 4 stages; whare these?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
     },
     {
-        question: "The engine works in 4 stages; what are these?",
+        question: "The eine work in 4 ages; what are these?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
     },
     {
-        question: "The engine works in 4 stages; what are these?",
-        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
-        correctAnswer: 1
-    },
-    {
-        question: "The engine works in 4 stages; what are these?",
-        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
-        correctAnswer: 1
-    },
-    {
-        question: "The engine works in 4 stages; what are these?",
-        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
-        correctAnswer: 1
-    },
-    {
-        question: "The engine works in 4 stages; what are these?",
+        question: "The enne works in 4 stages; at are ese?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
     }
