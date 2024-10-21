@@ -72,12 +72,13 @@ function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         loadQuestion();
     } else {
+        // Display quiz completion message and final score
         alert("Quiz completed! Your final score is " + score);
-        currentQuestionIndex = 0;
-        score = 0;
-        document.getElementById("score").textContent = score;
-        shuffle(questions); // Re-shuffle questions for next round
-        loadQuestion();
+        
+        // Optionally, you can also display a message in the HTML
+        document.getElementById("question").textContent = "Quiz Complete! Final Score: " + score;
+        document.getElementsByClassName("options")[0].style.display = "none"; // Hide options after completion
+        document.getElementById("submit").style.display = "none"; // Hide submit button after completion
     }
 }
 
