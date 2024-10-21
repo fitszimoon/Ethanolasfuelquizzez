@@ -1,18 +1,18 @@
 let questions = [
     {
-        question: "What is the capital of France?",
-        options: ["Berlin", "Madrid", "Paris", "Lisbon"],
-        correctAnswer: 2
+        question: "How ethanol is produced?",
+        options: ["Biomass", "Acids", "Produce by animals", "Starch"],
+        correctAnswer: 0
     },
     {
-        question: "Which planet is known as the Red Planet?",
-        options: ["Earth", "Mars", "Jupiter", "Saturn"],
+        question: "What is the process to make ethanol?",
+        options: ["Distillation of starch", "Fermentation of sugar", "Hydrolysis of cellulose", "Synthesis of glucose"],
         correctAnswer: 1
     },
     {
-        question: "Who wrote 'To be, or not to be'?",
-        options: ["Shakespeare", "Hemingway", "Austen", "Orwell"],
-        correctAnswer: 0
+        question: "The engine works in 4 stages; what are these?",
+        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
+        correctAnswer: 1
     }
 ];
 
