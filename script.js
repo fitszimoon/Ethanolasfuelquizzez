@@ -19,18 +19,45 @@ let questions = [
 let currentQuestionIndex = 0;
 let score = 0;
 
-function loadQuestion() {
-    let currentQuestion = questions[currentQuestionIndex];
-    document.getElementById("question").textContent = currentQuestion.question;
-    let options = document.getElementsByClassName("option");
-    
-    for (let i = 0; i < options.length; i++) {
-        options[i].textContent = currentQuestion.options[i];
+// Fisher-Yates shuffle for randomizing the array
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
 
-function checkAnswer(optionIndex) {
-    if (optionIndex === questions[currentQuestionIndex].correctAnswer) {
+// Randomize the questions at the start
+shuffle(questions);
+
+// Load the question and shuffle the options
+function loadQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    let options = currentQuestion.options.slice(); // Create a copy of options array
+    
+    // Shuffle the options for random order
+    shuffle(options);
+    
+    document.getElementById("question").textContent = currentQuestion.question;
+    
+    let buttons = document.getElementsByClassName("option");
+    
+    // Display shuffled options
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].textContent = options[i];
+        
+        // Check if the selected option matches the original correct answer
+        buttons[i].onclick = function() {
+            checkAnswer(options[i], currentQuestion.correctAnswer);
+        };
+    }
+}
+
+// Check if the selected answer is correct
+function checkAnswer(selectedOption, correctAnswerIndex) {
+    let correctAnswer = questions[currentQuestionIndex].options[correctAnswerIndex];
+    
+    if (selectedOption === correctAnswer) {
         score++;
         document.getElementById("score").textContent = score;
         alert("Correct!");
@@ -49,10 +76,12 @@ function nextQuestion() {
         currentQuestionIndex = 0;
         score = 0;
         document.getElementById("score").textContent = score;
+        shuffle(questions); // Re-shuffle questions for next round
         loadQuestion();
     }
 }
 
+// Load the first question on page load
 window.onload = function () {
     loadQuestion();
 };
