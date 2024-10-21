@@ -62,8 +62,11 @@ function checkAnswer(selectedOption, correctAnswerIndex) {
         document.getElementById("score").textContent = score;
         alert("Correct!");
     } else {
-        alert("Wrong answer!");
+        alert("Wrong answer! Moving to next question.");
     }
+    
+    // Move to the next question after checking the answer (whether correct or wrong)
+    nextQuestion();
 }
 
 function nextQuestion() {
