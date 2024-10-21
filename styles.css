@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Adjusted background color */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 400px; /* Adjusted width */
+    width: 400px; /* Set a consistent width */
     text-align: center;
 }
 
@@ -24,60 +24,36 @@ body {
 }
 
 #question {
-    font-size: 22px;
+    font-size: 22px; /* Adjusted font size */
     margin-bottom: 20px;
     text-align: center;
 }
 
+/* Styles for the options */
 .options {
-    margin-bottom: 20px;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Change to column layout */
+    align-items: center; /* Center the buttons horizontally */
+    margin-bottom: 20px; /* Spacing around the options */
 }
 
 .option {
     display: block;
-    background-color: #3498db;
+    background-color: #3498db; /* Blue background color */
     color: white;
     border: none;
     padding: 10px;
-    margin: 5px 0;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1.5rem;
-    transition: background-color 0.3s, transform 0.3s; /* Added transition for smooth effect */
+    margin: 5px 0; /* Space between buttons */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.5rem; /* Consistent font size */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth effect */
+    width: 100%; /* Set a consistent width for options */
 }
 
 .option:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Darker blue on hover */
     transform: scale(1.1) rotate(-3deg);
-}
-
-#submit {
-    background-color: #2ecc71;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#score-container {
-    margin-top: 20px;
-    font-size: 16px;
-}
-
-/* Styles for the progress bar */
-.progress-bar-container {
-    width: 100%;
-    background-color: #f3f3f3;
-    border-radius: 25px;
-    margin-bottom: 20px;
-    height: 20px;
-}
-
-#progress-bar {
-    width: 0%;
-    height: 100%;
-    background-color: #4caf50;
-    border-radius: 25px;
 }
 
 /* Styles for the navigation buttons (Back and Next) */
@@ -92,7 +68,7 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #4caf50; /* Same green background for both */
+    background-color: #4caf50; /* Green background */
     color: white; /* Text color */
     cursor: pointer; /* Pointer on hover */
     flex: 1; /* Allow buttons to grow equally */
@@ -101,4 +77,26 @@ body {
 
 .nav-button:hover {
     background-color: #45a049; /* Darker green on hover */
+}
+
+/* Styles for the progress bar */
+.progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4caf50; /* Green progress bar */
+    border-radius: 25px;
+}
+
+/* Style for the score display */
+#score-container {
+    margin-top: 20px;
+    font-size: 16px;
 }
