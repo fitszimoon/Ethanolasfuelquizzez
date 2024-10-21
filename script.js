@@ -51,6 +51,13 @@ function loadQuestion() {
             checkAnswer(options[i], currentQuestion.correctAnswer);
         };
     }
+
+    // Show or hide the "Back" button based on the current question index
+    if (currentQuestionIndex === 0) {
+        document.getElementById("back").style.display = "none"; // Hide "Back" button on the first question
+    } else {
+        document.getElementById("back").style.display = "block"; // Show "Back" button after the first question
+    }
 }
 
 // Check if the selected answer is correct
@@ -82,6 +89,15 @@ function nextQuestion() {
         document.getElementById("question").textContent = "Quiz Complete! Final Score: " + score;
         document.getElementsByClassName("options")[0].style.display = "none"; // Hide options after completion
         document.getElementById("submit").style.display = "none"; // Hide submit button after completion
+        document.getElementById("back").style.display = "none"; // Hide back button after completion
+    }
+}
+
+// Go back to the previous question
+function goBack() {
+    if (currentQuestionIndex > 0) {
+        currentQuestionIndex--;
+        loadQuestion();
     }
 }
 
