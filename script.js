@@ -64,6 +64,9 @@ function loadQuestion() {
     } else {
         document.getElementById("back").style.display = "block"; // Show "Back" button after the first question
     }
+    
+    // Update the progress bar
+    updateProgressBar();
 }
 
 // Check if the selected answer is correct
@@ -124,6 +127,12 @@ function canGoBack() {
         }
     }
     return false;
+}
+
+// Update the progress bar
+function updateProgressBar() {
+    let progress = ((answeredQuestions.length) / questions.length) * 100;
+    document.getElementById("progress-bar").style.width = progress + "%";
 }
 
 // Load the first question on page load
