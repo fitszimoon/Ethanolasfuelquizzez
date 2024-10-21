@@ -58,9 +58,9 @@ function loadQuestion() {
         };
     }
 
-    // Show or hide the "Back" button based on the current question index
-    if (currentQuestionIndex === 0) {
-        document.getElementById("back").style.display = "none"; // Hide "Back" button on the first question
+    // Show or hide the "Back" button based on the current question index and unanswered questions
+    if (currentQuestionIndex === 0 || !canGoBack()) {
+        document.getElementById("back").style.display = "none"; // Hide "Back" button on the first question or no unanswered questions left
     } else {
         document.getElementById("back").style.display = "block"; // Show "Back" button after the first question
     }
@@ -104,7 +104,7 @@ function nextQuestion() {
 
 // Go back to the previous unanswered question
 function goBack() {
-    if (currentQuestionIndex > 0) {
+    if (canGoBack()) {
         currentQuestionIndex--;
         
         // Skip already answered questions
@@ -114,6 +114,16 @@ function goBack() {
         
         loadQuestion();
     }
+}
+
+// Check if we can go back to a previous unanswered question
+function canGoBack() {
+    for (let i = currentQuestionIndex - 1; i >= 0; i--) {
+        if (!answeredQuestions.includes(i)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 // Load the first question on page load
