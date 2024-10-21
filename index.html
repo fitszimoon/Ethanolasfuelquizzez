@@ -4,22 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f9f9f9; /* Light background for contrast */
+        }
+
+        .quiz-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #quiz-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Styles for the options */
+        .options {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the buttons horizontally */
+            flex-wrap: wrap; /* Allow buttons to wrap if necessary */
+            margin: 20px 0; /* Spacing around the options */
+        }
+
+        .option {
+            padding: 15px 30px; /* Adjust padding for better size */
+            font-size: 16px; /* Consistent font size */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #007bff; /* Blue background color */
+            color: white; /* White text color */
+            cursor: pointer; /* Pointer on hover */
+            margin: 10px; /* Space between buttons */
+            flex: 0 1 150px; /* Grow and shrink as needed, with a base width of 150px */
+            transition: background-color 0.3s; /* Smooth background color change on hover */
+        }
+
+        .option:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Style for the navigation buttons (Back and Next) */
+        .nav-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50; /* Same green background for both */
+            color: white; /* Text color */
+            cursor: pointer; /* Pointer on hover */
+            margin: 10px;
+            flex: 1; /* Allow buttons to grow equally */
+        }
+
+        .nav-button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+
+        /* Align buttons using flexbox */
+        .button-container {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: space-between; /* Place buttons at opposite ends */
+            margin: 20px 0; /* Spacing around the buttons */
+        }
+
+        /* Styles for the progress bar */
+        .progress-bar-container {
+            width: 100%;
+            background-color: #f3f3f3;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            height: 20px;
+        }
+
+        #progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 25px;
+        }
+
+        /* Style for the question text */
+        #question {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the score display */
+        #score-container {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="quiz-container" id="quiz">
         <div id="quiz-title">Quiz: General Knowledge</div>
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        
         <div id="question">Question text here</div>
+        
+        <!-- Options Buttons -->
         <div class="options">
             <button class="option" onclick="checkAnswer(0)">Option 1</button>
             <button class="option" onclick="checkAnswer(1)">Option 2</button>
             <button class="option" onclick="checkAnswer(2)">Option 3</button>
             <button class="option" onclick="checkAnswer(3)">Option 4</button>
         </div>
-        <div>
-            <button id="back" onclick="goBack()" style="display: none;">Back</button> <!-- Back button -->
-            <button id="submit" onclick="nextQuestion()">Next</button>
+
+        <!-- Button container for Back and Next buttons -->
+        <div class="button-container">
+            <button id="back" onclick="goBack()" class="nav-button" style="display: none;">Back</button>
+            <button id="submit" onclick="nextQuestion()" class="nav-button">Next</button>
         </div>
+
         <div id="score-container">
             Your score: <span id="score">0</span>
         </div>
