@@ -152,3 +152,8 @@ body {
 
 .toggle-btn:hover {
     transform: scale(1.1) rotate(-3deg);
+}
+
+.main-content.shifted {
+    margin-left: 250px;
+}
