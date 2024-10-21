@@ -48,6 +48,7 @@ let questions = [
         question: "The engine works in 4 stages; what are these?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
+    }
 ];
 
 let currentQuestionIndex = 0;
