@@ -1,11 +1,11 @@
 let questions = [
     {  //Q1
-        question: "How ethanol is produced?",
-        options: ["Biomass", "Acids", "Produce by animals", "Starch"],
+        question: "Ethanol is primaraily made of??",
+        options: ["Corn", "Acids", "Produce by animals", "Starch"],
         correctAnswer: 0
     },
     {  //Q2
-        question: "What is the process to make ethanol?",
+        question: "What the starting prcoess in making ethanol?",
         options: ["Distillation of starch", "Fermentation of sugar", "Hydrolysis of cellulose", "Synthesis of glucose"],
         correctAnswer: 1
     },
@@ -20,8 +20,8 @@ let questions = [
         correctAnswer: 0
     },
     {  //Q5
-        question: "Why can ethanol lead to improved overall efficiency despite it's low energy content?",
-        options: ["Ethanol requires less foil", "When appropriately blended, can prove power milage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol engines have better combustion control, optimizing performance"],
+        question: "How can ethanol lead to improved overall efficiency despite it's low energy content?",
+        options: ["Ethanol requires less oil", "When appropriately blended, can prove power milage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol engines have better combustion control, optimizing performance"],
         correctAnswer: 1
     },
     {   //Q6
