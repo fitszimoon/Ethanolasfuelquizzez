@@ -93,7 +93,7 @@ function loadQuestion() {
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].textContent = options[i];
             buttons[i].onclick = function() {
-                checkAnswer(options[i], currentQuestion.correctAnswer);
+                checkAnswer(i); // Pass the index of the clicked option
             };
         }
     }
@@ -108,10 +108,8 @@ function loadQuestion() {
     updateProgressBar();
 }
 
-}
-
 // Check if the selected answer is correct
-function checkAnswer(selectedOption, correctAnswerIndex) {
+function checkAnswer(selectedOptionIndex) {
     let currentQuestion = questions[currentQuestionIndex];
 
     // Check if it's an identification type question
@@ -125,8 +123,7 @@ function checkAnswer(selectedOption, correctAnswerIndex) {
             alert("Wrong answer! The correct answer is: " + currentQuestion.identificationAnswer);
         }
     } else {
-        let correctAnswer = questions[currentQuestionIndex].options[correctAnswerIndex];
-        if (selectedOption === correctAnswer) {
+        if (selectedOptionIndex === currentQuestion.correctAnswer) {
             score++;
             document.getElementById("score").textContent = score;
             alert("Correct!");
@@ -203,8 +200,5 @@ window.onload = function () {
 
 function toggleSidebar() {
     var sidebar = document.getElementById('sidebar');
-    var mainContent = document.getElementById('main-content');
     sidebar.classList.toggle('open');
-    mainContent.classList.toggle('shifted');
-    document.getElementById('header').classList.toggle('shifted');
 }
