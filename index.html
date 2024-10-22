@@ -19,25 +19,27 @@
         <a href="#">Contact</a>
         </div>
         
-        <div id="question">Question text here</div>
-            
-        <!-- Options Buttons -->
-        <div class="options">
-            <button class="option" onclick="checkAnswer(0)">Option 1</button>
-            <button class="option" onclick="checkAnswer(1)">Option 2</button>
-            <button class="option" onclick="checkAnswer(2)">Option 3</button>
-            <button class="option" onclick="checkAnswer(3)">Option 4</button>
-        </div>
-      
-        <div id="identification-input" style="display:none;">
-            <input type="text" id="identification-answer" placeholder="Your answer here">
-            <button id="submit" onclick="submitIdentification()">Submit</button>
-       </div>
+     <!-- Question text -->
+<div id="question"></div>
 
-         <!-- Progress Bar -->
-        <div class="progress-bar-container">
-            <div id="progress-bar"></div>
-        </div>
+<!-- Multiple-choice options -->
+<div class="options">
+    <button class="option"></button>
+    <button class="option"></button>
+    <button class="option"></button>
+    <button class="option"></button>
+</div>
+
+<!-- Input field for identification questions -->
+<div id="identification-input" style="display:none;">
+    <input type="text" id="identification-answer" placeholder="Your answer here">
+    <button id="submit" onclick="submitIdentification()">Submit</button>
+</div>
+
+<!-- Progress bar -->
+<div class="progress">
+    <div id="progress-bar"></div>
+</div>
 
         <!-- Button container for Back and Next buttons -->
         <div class="button-container">
