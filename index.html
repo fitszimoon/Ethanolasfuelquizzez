@@ -8,42 +8,43 @@
 </head>
 <body>
     <div class="quiz-container" id="quiz">
-    <div id="quiz-title">Quiz: General Knowledge</div>
+        <div id="quiz-title">Quiz: General Knowledge</div>
 
-    <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+        <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
 
-    <div class="sidebar" id="sidebar">
+        <div class="sidebar" id="sidebar">
         <a href="/">Home</a>
         <a href="#">About</a>
         <a href="#">Gallery</a>
         <a href="#">Contact</a>
-    </div>
+        </div>
 
-    <!-- Progress Bar -->
-    <div class="progress-bar-container">
-        <div id="progress-bar"></div>
-    </div>
-
-    <div id="question">Question text here</div>
+        <!-- Progress Bar -->
+        <div class="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
         
-    <!-- Options Buttons inside a container -->
-    <div id="options-container" class="options">
-        <button class="option">Option 1</button>
-        <button class="option">Option 2</button>
-        <button class="option">Option 3</button>
-        <button class="option">Option 4</button>
+        <div id="question">Question text here</div>
+            
+        <!-- Options Buttons -->
+        <div class="options">
+            <button class="option" onclick="checkAnswer(0)">Option 1</button>
+            <button class="option" onclick="checkAnswer(1)">Option 2</button>
+            <button class="option" onclick="checkAnswer(2)">Option 3</button>
+            <button class="option" onclick="checkAnswer(3)">Option 4</button>
+        </div>
+
+        <!-- Button container for Back and Next buttons -->
+        <div class="button-container">
+            <button id="back" onclick="goBack()" class="nav-button" style="display: none;">Back</button>
+            <button id="submit" onclick="nextQuestion()" class="nav-button">Next</button>
+        </div>
+
+        <div id="score-container">
+            Your score: <span id="score">0</span>
+        </div>
     </div>
-
-    <input type="text" id="answerInput" style="display:none;" placeholder="Type your answer here">
-
-    <!-- Button container for Back and Next buttons -->
-    <div class="button-container">
-        <button id="back" onclick="goBack()" class="nav-button" style="display: none;">Back</button>
-        <button id="submit" onclick="nextQuestion()" class="nav-button">Next</button>
-    </div>
-
-    <div id="score-container">
-        Your score: <span id="score">0</span>
-    </div>
-</div>
-
+    
+    <script src="script.js"></script>
+</body>
+</html>
