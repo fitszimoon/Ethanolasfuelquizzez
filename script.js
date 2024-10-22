@@ -15,19 +15,18 @@ let questions = [
         correctAnswer: 1
     },
     {   //Q4
-        question: "What is the approximate percentage of ethanol content in beer?"
-        options: ["17-18%", "10-12%", "20-25%", "15-16%"]
+        question: "What is the approximate percentage of ethanol content in beer?",
+        options: ["17-18%", "10-12%", "20-25%", "15-16%"],
         correctAnswer: 0
     },
     {  //Q5
         question: "Why can ethanol lead to improved overall efficiency despite it's low energy content?",
-        options: ["Ethanol requires less foil", "When appropriately blended, can prove power milage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol 
-engines have better combustion control, optimizing performance"]
+        options: ["Ethanol requires less foil", "When appropriately blended, can prove power milage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol engines have better combustion control, optimizing performance"],
         correctAnswer: 1
     },
     {   //Q6
-        question: "How does the higher octane rating of ethanol affect engine performance?"
-        options: ["It leads to knocking", "It allows engines to run at a higher compression ratio without knocking, resulting in greater power", "It decreases overall engine efficiency", "It requires more fuel to achieve optimal performance"]
+        question: "How does the higher octane rating of ethanol affect engine performance?",
+        options: ["It leads to knocking", "It allows engines to run at a higher compression ratio without knocking, resulting in greater power", "It decreases overall engine efficiency", "It requires more fuel to achieve optimal performance"],
         correctAnswer: 1
     },
     {   //Q7
@@ -36,18 +35,18 @@ engines have better combustion control, optimizing performance"]
         correctAnswer: 1
     },
     {   //Q8
-        question: "What is the role of the spark in an Otto cycle engine?"
-        options: ["To compress the air-fuel mixture before ignition", " To ignite the air-gasoline mixture, causing an explosive release of heat energy", "To cool the combustion chamber during operation", "To control the exhaust gases after combustion"]
+        question: "What is the role of the spark in an Otto cycle engine?",
+        options: ["To compress the air-fuel mixture before ignition", " To ignite the air-gasoline mixture, causing an explosive release of heat energy", "To cool the combustion chamber during operation", "To control the exhaust gases after combustion"],
         correctAnswer: 1
     },  
     {   //Q9
-        question: "Who designed the first internal combustion engine"
-        options: ["Samuel Morey", "Sammuel Morey", "Nicolaus Otto", "Nicolas Otto"]
+        question: "Who designed the first internal combustion engine",
+        options: ["Samuel Morey", "Sammuel Morey", "Nicolaus Otto", "Nicolas Otto"],
         correctAnswer: 0
     },
     {   //Q10
-        question: "In order to make the final ethanol product (99% ethanol content), what process does it go through?"
-        options: ["Distillation", "Fermentation", "Reverse Osmosis", "Molecular Sieve Process"]
+        question: "In order to make the final ethanol product (99% ethanol content), what process does it go through?",
+        options: ["Distillation", "Fermentation", "Reverse Osmosis", "Molecular Sieve Process"],
         correctAnswer: 3
     }
 ];
