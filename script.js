@@ -74,34 +74,40 @@ function loadQuestion() {
     }
 
     let currentQuestion = questions[currentQuestionIndex];
-    let options = currentQuestion.options.slice(); // Create a copy of options array
-    
-    // Shuffle the options for random order
-    shuffle(options);
-    
     document.getElementById("question").textContent = currentQuestion.question;
-    
-    let buttons = document.getElementsByClassName("option");
-    
-    // Display shuffled options
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].textContent = options[i];
+
+    // Check if the current question is identification-type
+    if (currentQuestion.identificationAnswer) {
+        // Hide option buttons and show text input for identification question
+        document.getElementById("options-container").style.display = "none";
+        document.getElementById("answerInput").style.display = "block";
+    } else {
+        // Show option buttons and hide text input for multiple-choice question
+        document.getElementById("options-container").style.display = "block";
+        document.getElementById("answerInput").style.display = "none";
         
-        // Check if the selected option matches the original correct answer
-        buttons[i].onclick = function() {
-            checkAnswer(options[i], currentQuestion.correctAnswer);
-        };
+        let options = currentQuestion.options.slice(); // Create a copy of options array
+        shuffle(options); // Shuffle the options for random order
+
+        let buttons = document.getElementsByClassName("option");
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].textContent = options[i];
+            buttons[i].onclick = function() {
+                checkAnswer(options[i], currentQuestion.correctAnswer);
+            };
+        }
     }
 
-    // Show or hide the "Back" button based on the current question index and unanswered questions
+    // Show or hide the "Back" button based on the current question index
     if (currentQuestionIndex === 0 || !canGoBack()) {
-        document.getElementById("back").style.display = "none"; // Hide "Back" button on the first question or no unanswered questions left
+        document.getElementById("back").style.display = "none"; // Hide "Back" button
     } else {
-        document.getElementById("back").style.display = "block"; // Show "Back" button after the first question
+        document.getElementById("back").style.display = "block"; // Show "Back" button
     }
-    
-    // Update the progress bar
+
     updateProgressBar();
+}
+
 }
 
 // Check if the selected answer is correct
