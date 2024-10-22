@@ -217,3 +217,6 @@ function toggleSidebar() {
     mainContent.classList.toggle('shifted');
     document.getElementById('header').classList.toggle('shifted');
 }
+function submitIdentification() {
+    checkAnswer(null, null);  // No need to pass options for text-based answers
+}
