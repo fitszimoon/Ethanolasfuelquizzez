@@ -5,12 +5,12 @@ let questions = [
         correctAnswer: 0
     },
     {  //Q2
-        question: "What the starting prcoess in making ethanol?",
+        question: "What is the starting prcoess in making ethanol?",
         options: ["Distillation of starch", "Fermentation of sugar", "Hydrolysis of cellulose", "Synthesis of glucose"],
         correctAnswer: 1
     },
     {   //Q3
-        question: "The engine works in 4 stages; whate these?",
+        question: "The engine works in 4 stages; what are these?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
     },
