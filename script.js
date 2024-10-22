@@ -21,7 +21,7 @@ let questions = [
     },
     {  //Q5
         question: "How can ethanol lead to improved overall efficiency despite it's low energy content?",
-        options: ["Ethanol requires less oil", "When appropriately blended, can prove power milage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol engines have better combustion control, optimizing performance"],
+        options: ["Ethanol requires less oil", "When appropriately blended, can prove power mileage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol engines have better combustion control, optimizing performance"],
         correctAnswer: 1
     },
     {   //Q6
