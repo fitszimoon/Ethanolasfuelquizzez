@@ -1,31 +1,55 @@
 let questions = [
-    {
+    {  //Q1
         question: "How ethanol is produced?",
         options: ["Biomass", "Acids", "Produce by animals", "Starch"],
         correctAnswer: 0
     },
-    {
-        question: "What is the proto make ethanol?",
+    {  //Q2
+        question: "What is the process to make ethanol?",
         options: ["Distillation of starch", "Fermentation of sugar", "Hydrolysis of cellulose", "Synthesis of glucose"],
         correctAnswer: 1
     },
-    {
+    {   //Q3
         question: "The engine works in 4 stages; whate these?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
     },
-     {
+    {   //Q4
+        question: "What is the approximate percentage of ethanol content in beer?"
+        options: ["17-18%", "10-12%", "20-25%", "15-16%"]
+        correctAnswer: 0
+    },
+    {  //Q5
         question: "Why can ethanol lead to improved overall efficiency despite it's low energy content?",
         options: ["Ethanol requires less foil", "When appropriately blended, can prove power milage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol 
-engines have better combustion control, optimizing performance"],
+engines have better combustion control, optimizing performance"]
         correctAnswer: 1
     },
-    {
+    {   //Q6
+        question: "How does the higher octane rating of ethanol affect engine performance?"
+        options: ["It leads to knocking", "It allows engines to run at a higher compression ratio without knocking, resulting in greater power", "It decreases overall engine efficiency", "It requires more fuel to achieve optimal performance"]
+        correctAnswer: 1
+    },
+    {   //Q7
         question: "What is the octane rating of ethanol compared to that of gasoline?",
         options: ["Ethanol has an octane rating of 95, while gasoline averages 90", "Ethanol has an octane rating of 109, while gasoline ranges from 91-97", "Both have similar octane ratings of around 100", "Ethanol's octane rating is lower than most gasoline blends"],
         correctAnswer: 1
     },
-   
+    {   //Q8
+        question: "What is the role of the spark in an Otto cycle engine?"
+        options: ["To compress the air-fuel mixture before ignition", " To ignite the air-gasoline mixture, causing an explosive release of heat energy", "To cool the combustion chamber during operation", "To control the exhaust gases after combustion"]
+        correctAnswer: 1
+    },  
+    {   //Q9
+        question: "Who designed the first internal combustion engine"
+        options: ["Samuel Morey", "Sammuel Morey", "Nicolaus Otto", "Nicolas Otto"]
+        correctAnswer: 0
+    },
+    {   //Q10
+        question: "In order to make the final ethanol product (99% ethanol content), what process does it go through?"
+        options: ["Distillation", "Fermentation", "Reverse Osmosis", "Molecular Sieve Process"]
+        correctAnswer: 3
+    }
 ];
 
 let currentQuestionIndex = 0;
