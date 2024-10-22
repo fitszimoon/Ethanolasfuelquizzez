@@ -27,8 +27,8 @@ engines have better combustion control, optimizing performance"],
     },
     {
         question: ". How does the higher octane rating of ethanol affect engine performance?",
-        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
-        correctAnswer: 1
+        type: "identification"
+        correctAnswer: 123
     },
     {
         question: "The engine works in 4 stages; what are these?",
