@@ -15,8 +15,9 @@ let questions = [
         correctAnswer: 1
     },
     {
-        question: "The engine works in 4 stageat are these?",
-        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
+        question: "Why can ethanol lead to improved overall efficiency despite it's low energy content?",
+        options: ["Ethanol requires less foil", "when appropriately blended, can prove power milage", " Ethanol has a higher energy density enhancing efficiency ", " Ethanol 
+engines have better combustion control, optimizing performance"],
         correctAnswer: 1
     },
     {
