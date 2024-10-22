@@ -165,6 +165,9 @@ function nextQuestion() {
         document.getElementById("submit").style.display = "none"; // Hide submit button after completion
         document.getElementById("back").style.display = "none"; // Hide back button after completion
     }
+  
+    function submitIdentification() {
+    checkAnswer(null, null);  // No need to pass options for text-based answers
 }
 
 // Go back to the previous unanswered question
@@ -190,6 +193,7 @@ function canGoBack() {
     }
     return false;
 }
+
 
 // Update the progress bar
 function updateProgressBar() {
@@ -217,6 +221,4 @@ function toggleSidebar() {
     mainContent.classList.toggle('shifted');
     document.getElementById('header').classList.toggle('shifted');
 }
-function submitIdentification() {
-    checkAnswer(null, null);  // No need to pass options for text-based answers
-}
+
