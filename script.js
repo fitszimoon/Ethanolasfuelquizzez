@@ -16,17 +16,17 @@ let questions = [
     },
     {
         question: "Why can ethanol lead to improved overall efficiency despite it's low energy content?",
-        options: ["Ethanol requires less foil", "when appropriately blended, can prove power milage", " Ethanol has a higher energy density enhancing efficiency ", " Ethanol 
+        options: ["Ethanol requires less foil", "When appropriately blended, can prove power milage", " Ethanol has a higher energy density enhancing efficiency ", " Ethanol 
 engines have better combustion control, optimizing performance"],
         correctAnswer: 1
     },
     {
-        question: "The engine work 4 stages; what are these?",
-        options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
+        question: "What is the octane rating of ethanol compared to that of gasoline?",
+        options: ["Ethanol has an octane rating of 95, while gasoline averages 90.", "Ethanol has an octane rating of 109, while gasoline ranges from 91-97.", "Both have similar octane ratings of around 100.", "Ethanol's octane rating is lower than most gasoline blends."],
         correctAnswer: 1
     },
     {
-        question: "The engine works in tages; what are these?",
+        question: ". How does the higher octane rating of ethanol affect engine performance?",
         options: ["Intake, compression, combustion, discharge", "Intake, compression, ignition, exhaust", "Intake, compression, combustion, exhaustion", "Intake, expansion, combustion, expulsion"],
         correctAnswer: 1
     },
