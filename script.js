@@ -1,11 +1,11 @@
 let questions = [
     {  //Q1
-        question: "Ethanol is primaraily made of??",
+        question: "Ethanol is primarily made of??",
         options: ["Corn", "Acids", "Produce by animals", "Starch"],
         correctAnswer: 0
     },
     {  //Q2
-        question: "What is the starting prcoess in making ethanol?",
+        question: "What is the starting process in making ethanol?",
         options: ["Distillation of starch", "Fermentation of sugar", "Hydrolysis of cellulose", "Synthesis of glucose"],
         correctAnswer: 1
     },
@@ -20,7 +20,7 @@ let questions = [
         correctAnswer: 0
     },
     {  //Q5
-        question: "How can ethanol lead to improved overall efficiency despite it's low energy content?",
+        question: "How can ethanol lead to improved overall efficiency despite its low energy content?",
         options: ["Ethanol requires less oil", "When appropriately blended, can prove power mileage", "Ethanol has a higher energy density enhancing efficiency", "Ethanol engines have better combustion control, optimizing performance"],
         correctAnswer: 1
     },
@@ -36,11 +36,11 @@ let questions = [
     },
     {   //Q8
         question: "What is the role of the spark in an Otto cycle engine?",
-        options: ["To compress the air-fuel mixture before ignition", " To ignite the air-gasoline mixture, causing an explosive release of heat energy", "To cool the combustion chamber during operation", "To control the exhaust gases after combustion"],
+        options: ["To compress the air-fuel mixture before ignition", "To ignite the air-gasoline mixture, causing an explosive release of heat energy", "To cool the combustion chamber during operation", "To control the exhaust gases after combustion"],
         correctAnswer: 1
     },  
     {   //Q9
-        question: "Who designed the first internal combustion engine",
+        question: "Who designed the first internal combustion engine?",
         options: ["Samuel Morey", "Sammuel Morey", "Nicolaus Otto", "Nicolas Otto"],
         correctAnswer: 0
     },
@@ -107,22 +107,28 @@ function loadQuestion() {
 // Check if the selected answer is correct
 function checkAnswer(selectedOption, correctAnswerIndex) {
     let correctAnswer = questions[currentQuestionIndex].options[correctAnswerIndex];
-    
+    let feedbackElement = document.getElementById("feedback");
+
     if (selectedOption === correctAnswer) {
         score++;
         document.getElementById("score").textContent = score;
-        alert("Correct!");
+        feedbackElement.textContent = "Correct! Well done!";
+        feedbackElement.className = "feedback-correct"; // Add correct feedback styling
     } else {
-        alert("Wrong answer! Moving to next question.");
+        feedbackElement.textContent = "Wrong answer! Try the next one.";
+        feedbackElement.className = "feedback-wrong"; // Add wrong feedback styling
+    }
+
+    // Show the feedback and hide it after a delay
+    feedbackElement.style.display = "block";
+    setTimeout(() => {
+        feedbackElement.style.display = "none";
+    }, 2000); // Adjust the timeout duration as needed (2 seconds in this case)
+
+    answeredQuestions.push(currentQuestionIndex);
+    nextQuestion();
     }
     
-    // Add current question to the list of answered questions
-    answeredQuestions.push(currentQuestionIndex);
-    
-    // Move to the next question after checking the answer (whether correct or wrong)
-    nextQuestion();
-}
-
 function nextQuestion() {
     currentQuestionIndex++;
     
@@ -185,8 +191,7 @@ window.onload = function () {
 
 function toggleSidebar() {
     var sidebar = document.getElementById('sidebar');
-    var mainContent = document.getElementById('main-content');
+    var mainContent = document.getElementById('quiz'); // Use ID instead of class
     sidebar.classList.toggle('open');
-    mainContent.classList.toggle('shifted');
-    document.getElementById('header').classList.toggle('shifted');
+    mainContent.classList.toggle('shifted'); // Toggle the shifted class
 }
